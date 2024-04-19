@@ -1,2 +1,2 @@
-add_executable(AakaarClient main.cpp)
-target_link_libraries(AakaarClient PRIVATE aakaar)
+add_subdirectory(console)
+add_subdirectory(gui)

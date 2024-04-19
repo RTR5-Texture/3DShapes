@@ -1,0 +1,4 @@
+[Feb  4 2024:18:50:00][OGL.cpp::WndProc(200)] WM_CREATE received.
+[Feb  4 2024:18:50:00][OGL.cpp::WinMain(152)] Window created, starting message loop.
+[Feb  4 2024:18:50:00][OGL.cpp::WndProc(237)] WM_DESTROY received, posting WM_QUIT message.
+[Feb  4 2024:18:50:00][OGL.cpp::WinMain(161)] WM_QUIT received, exiting game loop.

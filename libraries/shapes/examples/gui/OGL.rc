@@ -1,0 +1,4 @@
+#include <windows.h>
+#include "OGL.h"
+
+IDI_MY_INITIAL_ICON ICON "initial.ico"

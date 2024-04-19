@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.2)
 
 project(aakaar)
 
@@ -27,6 +27,6 @@ include(cmake/BuildConfig.cmake)
 
 # disable WIN32 GUI application by default
 # applications that want to build as WIN32 application should use the WIN32 flag for add_executable()
-set(CMAKE_WIN32_EXECUTABLE OFF)
+set(CMAKE_WIN32_EXECUTABLE ON)
 
 add_subdirectory(libraries)
