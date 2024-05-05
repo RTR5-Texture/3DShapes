@@ -3,6 +3,8 @@ project(aakaar VERSION 0.1 LANGUAGES CXX)
 add_library(aakaar SHARED
 	include/Aakaar.h
 	include/detail/Api.h
+	include/detail/AakaarUtils.h
+	src/detail/AakaarUtils.cpp
 	src/Aakaar.cpp
 )
 

@@ -27,6 +27,9 @@ include(cmake/BuildConfig.cmake)
 
 # disable WIN32 GUI application by default
 # applications that want to build as WIN32 application should use the WIN32 flag for add_executable()
-set(CMAKE_WIN32_EXECUTABLE ON)
+set(CMAKE_WIN32_EXECUTABLE OFF)
+
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}\\bin")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}\\bin")
 
 add_subdirectory(libraries)

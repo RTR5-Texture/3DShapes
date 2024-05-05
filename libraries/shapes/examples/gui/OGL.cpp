@@ -538,7 +538,7 @@ int initialize(void)
     mvpMatrixUniform = glGetUniformLocation(gShaderProgramObject, "uMVPMatrix");
 
     // declare position and color arrays
-    if (GetCubeVertices(&cube_position) == AAKAAR_FAILED) {
+    if (GetCubeVertices(&cube_position) == AakaarStatus::AAKAAR_FAILED) {
       LOG_ERROR("\nFailed to get cube vertices.\n");
       return -10;
     }

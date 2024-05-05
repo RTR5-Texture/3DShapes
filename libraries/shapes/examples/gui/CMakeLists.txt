@@ -1,4 +1,4 @@
-add_executable(AakaarClientGUI)
+add_executable(AakaarClientGUI WIN32)
 
 target_sources(AakaarClientGUI
 PRIVATE
