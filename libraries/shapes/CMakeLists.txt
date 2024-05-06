@@ -6,6 +6,7 @@ add_library(aakaar SHARED
 	include/detail/AakaarUtils.h
 	src/detail/AakaarUtils.cpp
 	src/Aakaar.cpp
+	src/Cylinder.cpp
 )
 
 set_target_properties(aakaar

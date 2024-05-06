@@ -12,7 +12,8 @@
 AMC_TEXTURE_AAKAAR_API enum class AakaarStatus
 {
 	AAKAAR_OK,
-	AAKAAR_FAILED
+	AAKAAR_FAILED,
+	AAKAAR_NOT_INITIALIZED
 };
 
 extern "C" AMC_TEXTURE_AAKAAR_API
@@ -23,7 +24,6 @@ typedef struct _POINT_DATA
 	float z;
 } VERTEX, NORMAL;
 
-extern "C" AMC_TEXTURE_AAKAAR_API
 
 extern "C" AMC_TEXTURE_AAKAAR_API 
 AakaarStatus GetCubeVertices(_Out_ float** vertices);
@@ -38,3 +38,26 @@ AakaarStatus GetTorusVertices(
 	_In_ const double outerRadius, 
 	_In_ const int numSides, 
 	_In_ const int numRings);
+
+
+extern "C" AMC_TEXTURE_AAKAAR_API AakaarStatus GetCubeVertices(float**);
+
+//extern "C" AMC_TEXTURE_AAKAAR_API AakaarStatus GetIntegerValue(int*);
+
+extern "C" AMC_TEXTURE_AAKAAR_API AakaarStatus GenerateCylinder(float, float, int, int);
+
+extern "C" AMC_TEXTURE_AAKAAR_API AakaarStatus GetCylinderVertices(float**);
+
+extern "C" AMC_TEXTURE_AAKAAR_API int GetCylinderVerticesCount(void);
+
+extern "C" AMC_TEXTURE_AAKAAR_API AakaarStatus GetCylinderNormals(float**);
+
+extern "C" AMC_TEXTURE_AAKAAR_API int GetCylinderNormalsCount(void);
+
+extern "C" AMC_TEXTURE_AAKAAR_API AakaarStatus GetCylinderTexcords(float**);
+
+extern "C" AMC_TEXTURE_AAKAAR_API int GetCylinderTexcordsCount(void);
+
+extern "C" AMC_TEXTURE_AAKAAR_API AakaarStatus GetCylinderIndices(int**);
+
+extern "C" AMC_TEXTURE_AAKAAR_API int GetCylinderIndicesCount(void);

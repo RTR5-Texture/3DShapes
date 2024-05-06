@@ -2,6 +2,26 @@
 #include <stdlib.h>
 #include "..\include\Aakaar.h"
 
+void getCylinderVertices()
+{
+	float* cylinderVertices = NULL;
+	int cylinder_vertices_count = 0;
+
+	AakaarStatus status = GenerateCylinder(1.0f, 5.0f, 5, 5);
+	if (status == AakaarStatus::AAKAAR_FAILED)
+	{
+		printf("\nFailed to get cube vertices.\n");
+	}
+	else {
+		cylinder_vertices_count = GetCylinderVerticesCount();
+		printf("\nFetched cylinder vertices count = %d\n", cylinder_vertices_count);
+		GetCylinderVertices(&cylinderVertices);
+		for (int i = 0; i < cylinder_vertices_count*3; i++)
+		{
+			printf("\n%f, %f, %f", cylinderVertices[i], cylinderVertices[i+1], cylinderVertices[i+2]);	
+		}
+	}
+}
 
 void GetCubeVertices()
 {
@@ -84,6 +104,7 @@ int main()
 		printf("\n\n **** Aakaar Test Application ****\n\n");
 		printf("\n\n1. Cube");
 		printf("\n2. Torus");
+		printf("\n3. Cylinder");
 		printf("\n0. Exit");
 
 		printf("\n\nEnter option: ");
@@ -99,6 +120,9 @@ int main()
 				break;
 			case 2:
 				GetTorusVertices();
+				break;
+			case 3:
+				getCylinderVertices();
 				break;
 			default:
 				break;
